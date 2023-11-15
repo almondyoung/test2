@@ -19,6 +19,13 @@ spec:
       containers:
       - name: astral2
         image: docker.io/mmchong/astral:latest
+        resources:
+          requests:
+            cpu: 20m
+            memory: 100Mi
+          limits:
+            cpu: 500m
+            memory: 500Mi
         ports:
         - containerPort: 8000
         
